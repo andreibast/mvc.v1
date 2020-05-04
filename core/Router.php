@@ -1,5 +1,5 @@
 <?php
-//The file itself must be named in uppercase, so the autoload function set in bootstrap.php knows its a class
+//The file itself must be named in uppercase, so the autoload function set in bootstrap.php knows its a class. Fully described in Default Layout part 2, starting from min 8.
 
 class Router{
     public static function route($url){ // 
