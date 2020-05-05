@@ -2,6 +2,15 @@
 
 define('DEBUG', true);
 
+//database settings
+define('DB_NAME', 'andreimvc.v1');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+define('DB_HOST', '127.0.0.1'); //database host. Use IP address to avoid DNS lookup
+
+
+
+
 define('DEFAULT_CONTROLLER', 'Home'); //default controller if there isn't one defined in the URL
 define('DEFAULT_LAYOUT', 'default'); //if no layout is set in the controller, use this layout.
 
