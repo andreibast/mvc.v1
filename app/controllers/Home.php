@@ -22,13 +22,11 @@ class Home extends Controller {
         // $columns = $db->get_columns('contacts');
         // dnd($columns);
 
-        $contacts = $db->findFirst('contacts', [
-            'conditions' => "lname = ?",
-            'bind' => ['B'],
-            
-        ]);
-
-        dnd($contacts);
+        // $contacts = $db->findFirst('contacts', [
+        //     'conditions' => "lname = ?",
+        //     'bind' => [1]
+        // ]);
+        //dnd($contacts);
 
 
     

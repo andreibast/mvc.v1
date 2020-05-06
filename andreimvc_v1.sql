@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2020 at 08:41 PM
+-- Generation Time: May 06, 2020 at 10:54 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -53,6 +53,42 @@ INSERT INTO `contacts` (`id`, `fname`, `lname`, `email`, `phone1`, `phone2`, `ph
 (1, 'Andrei', 'b', 'andrei@yahoo.com', '125125215', '521532152', '', '123 Main Street', '', 'Bucharest', 'Ilfov', '5121521', 'Romania', 1),
 (2, 'Andrei', 'Bast', 'andrei@yepyep.com', '', '', '', '', '', '', '', '', '', 0);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(150) NOT NULL,
+  `email` varchar(150) NOT NULL,
+  `password` varchar(150) NOT NULL,
+  `fname` varchar(150) NOT NULL,
+  `lname` varchar(150) NOT NULL,
+  `acl` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `fname`, `lname`, `acl`) VALUES
+(1, 'andreibast', 'andreibast@blabla.com', '$2y$10$CVRYyE2XGvrZM8hJXP/B4OOsumj8jsJawTJKdm.P281H9TSrHI73W', 'Andrei', 'Bast', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_sessions`
+--
+
+CREATE TABLE `user_sessions` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `sessions` varchar(255) NOT NULL,
+  `user_agent` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -64,6 +100,18 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user_sessions`
+--
+ALTER TABLE `user_sessions`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -72,6 +120,18 @@ ALTER TABLE `contacts`
 --
 ALTER TABLE `contacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `user_sessions`
+--
+ALTER TABLE `user_sessions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
