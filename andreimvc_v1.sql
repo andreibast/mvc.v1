@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2020 at 10:54 PM
+-- Generation Time: May 07, 2020 at 12:58 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -66,15 +66,16 @@ CREATE TABLE `users` (
   `password` varchar(150) NOT NULL,
   `fname` varchar(150) NOT NULL,
   `lname` varchar(150) NOT NULL,
-  `acl` text NOT NULL
+  `acl` text NOT NULL,
+  `deleted` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `fname`, `lname`, `acl`) VALUES
-(1, 'andreibast', 'andreibast@blabla.com', '$2y$10$CVRYyE2XGvrZM8hJXP/B4OOsumj8jsJawTJKdm.P281H9TSrHI73W', 'Andrei', 'Bast', '');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `fname`, `lname`, `acl`, `deleted`) VALUES
+(1, 'andreibast', 'andreibast@blabla.com', '$2y$10$CVRYyE2XGvrZM8hJXP/B4OOsumj8jsJawTJKdm.P281H9TSrHI73W', 'Andrei', 'Bast', '', 0);
 
 -- --------------------------------------------------------
 

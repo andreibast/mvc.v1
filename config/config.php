@@ -18,3 +18,8 @@ define('PROOT', '/AndreiMVC/mvc.v1/'); //less likely to set this on live servers
 
 define('SITE_TITLE','Andrei MVC Framework'); //this will be used if no site title is set
 
+define('CURRENT_USER_SESSION_NAME', 'kwXeuysqldkKfejkFEkFEf'); //session name for logged user
+define('REMEMBER_ME_COOKIE_NAME', 'KLfLjl35rfrKL4fffws'); //cookie name for logged user
+define('REMEMBER_ME_COOKIE_EXPIRY', 604800); //time in seconds for remember-me-cookie to live (30 days)
+
+
